@@ -1,0 +1,9 @@
+# Static site: publish the project root (contains index.html + assets/)
+[build]
+  publish = "."
+
+# Long cache for versioned-looking assets; HTML stays default short cache
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

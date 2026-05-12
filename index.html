@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Karma</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Source+Sans+3:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Relative path: works for file://, Live Server, and Netlify (publish folder = this directory) -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="artboard-wrap" aria-label="Karma homepage">
+        <img
+          src="assets/full-page.png"
+          alt="Karma homepage"
+          class="artboard-image"
+          width="1905"
+          height="10432"
+          decoding="async"
+          fetchpriority="high"
+        />
+
+        <div class="overlay">
+          <!-- Covers baked-in header in the PNG so only the live navbar shows -->
+          <div class="nav-mask" aria-hidden="true"></div>
+
+          <nav class="figma-nav" aria-label="Primary">
+            <a class="brand" href="#" data-scroll-y="0" aria-label="Karma home">
+              <img src="assets/logo-uploaded.png" alt="Karma logo" width="120" height="120" decoding="async" />
+            </a>
+
+            <button
+              id="menuBtn"
+              class="menu-btn"
+              type="button"
+              aria-expanded="false"
+              aria-controls="mainNav"
+            >
+              Menu
+            </button>
+
+            <div id="mainNav" class="nav-links">
+              <a href="#" data-scroll-y="0">Home</a>
+              <a href="#karma" data-scroll-y="1047">Karma <span>▾</span></a>
+              <a href="#ideology" data-scroll-y="5276">Ideology <span>▾</span></a>
+              <a href="#events" data-scroll-y="7014">Events <span>▾</span></a>
+              <a href="#contact" data-scroll-y="9088">Contact <span>▾</span></a>
+              <a href="#blog" data-scroll-y="7014">Blog <span>▾</span></a>
+            </div>
+          </nav>
+
+          <a class="cta read red" href="#" data-scroll-y="1866" style="left: 31.286%; top: 15.576%; width: 7.559%; height: 0.422%;">Read More</a>
+          <a class="cta read black" href="#" data-scroll-y="8234" style="left: 12.546%; top: 74.117%; width: 7.559%; height: 0.422%;">Read More</a>
+          <a class="cta read black" href="#" data-scroll-y="8234" style="left: 70.499%; top: 74.117%; width: 7.559%; height: 0.422%;">Read More</a>
+          <a class="cta read black" href="#" data-scroll-y="8234" style="left: 70.499%; top: 69.669%; width: 7.559%; height: 0.422%;">Read More</a>
+          <a class="cta read red" href="#" data-scroll-y="8234" style="left: 44.357%; top: 69.669%; width: 7.559%; height: 0.422%;">Read More</a>
+          <a class="cta read red" href="#" data-scroll-y="8234" style="left: 44.357%; top: 74.117%; width: 7.559%; height: 0.422%;">Read More</a>
+          <!-- Invisible hit-zones only — layout % = Figma 1905×10432; footer bar y 9863–10432. -->
+          <footer class="footer-overlay" aria-label="Site footer">
+            <a
+              class="footer-hit"
+              href="#"
+              data-scroll-y="1047"
+              aria-label="Explore"
+              style="left: 41.8%; top: 95.38%; width: 16%; height: 0.34%"
+            ></a>
+            <a
+              class="footer-hit"
+              href="#"
+              data-scroll-y="7014"
+              aria-label="Courses"
+              style="left: 41.8%; top: 95.72%; width: 16%; height: 0.34%"
+            ></a>
+            <a
+              class="footer-hit"
+              href="#"
+              data-scroll-y="5276"
+              aria-label="Ideology"
+              style="left: 41.8%; top: 96.06%; width: 16%; height: 0.34%"
+            ></a>
+            <a
+              class="footer-hit"
+              href="#"
+              data-scroll-y="7014"
+              aria-label="Events"
+              style="left: 41.8%; top: 96.4%; width: 16%; height: 0.34%"
+            ></a>
+            <a
+              class="footer-hit"
+              href="#"
+              data-scroll-y="9088"
+              aria-label="Volunteer"
+              style="left: 41.8%; top: 96.74%; width: 16%; height: 0.34%"
+            ></a>
+            <a
+              class="footer-hit"
+              href="PASTE_INSTAGRAM_LINK"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              style="left: 75.2%; top: 95.95%; width: 2.8%; height: 0.5%"
+            ></a>
+            <a
+              class="footer-hit"
+              href="PASTE_LINKEDIN_LINK"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              style="left: 78.7%; top: 95.95%; width: 2.8%; height: 0.5%"
+            ></a>
+            <a
+              class="footer-hit"
+              href="PASTE_TWITTER_LINK"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="X (Twitter)"
+              style="left: 82.2%; top: 95.95%; width: 2.8%; height: 0.5%"
+            ></a>
+          </footer>
+
+          <form class="form-overlay" id="joinForm">
+            <label class="sr-only" for="fullName">Full Name</label>
+            <input id="fullName" name="fullName" type="text" class="field name" required />
+
+            <label class="sr-only" for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" class="field phone" required />
+
+            <label class="sr-only" for="email">Email</label>
+            <input id="email" name="email" type="email" class="field email" required />
+
+            <label class="sr-only" for="interest">Interest Area</label>
+            <input id="interest" name="interest" type="text" class="field interest" />
+
+            <label class="sr-only" for="why">Why you?</label>
+            <textarea id="why" name="why" class="field why"></textarea>
+
+            <button class="cta join red join-submit" type="submit">Join Now</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <script>
+      (function () {
+        var menuBtn = document.getElementById("menuBtn");
+        var navLinks = document.getElementById("mainNav");
+        var artboard = document.querySelector(".artboard-wrap");
+        var interactiveLinks = document.querySelectorAll("a[data-scroll-y], button[data-scroll-y]");
+        var joinForm = document.getElementById("joinForm");
+
+        var DESIGN_H = 10432;
+
+        function scrollToDesignY(y) {
+          var rect = artboard.getBoundingClientRect();
+          var scrollTop =
+            window.pageYOffset ||
+            document.documentElement.scrollTop ||
+            document.body.scrollTop ||
+            0;
+          var yPx = (Number(y) / DESIGN_H) * rect.height;
+          var target = scrollTop + rect.top + yPx - 24;
+          window.scrollTo({ top: Math.max(0, target), behavior: "smooth" });
+        }
+
+        function syncArtboardMetrics() {
+          artboard.style.setProperty("--artboard-w", artboard.clientWidth + "px");
+          artboard.style.setProperty("--artboard-h", artboard.offsetHeight + "px");
+        }
+
+        syncArtboardMetrics();
+        window.addEventListener("resize", syncArtboardMetrics);
+        if (window.ResizeObserver) {
+          new ResizeObserver(syncArtboardMetrics).observe(artboard);
+        }
+
+        menuBtn.addEventListener("click", function () {
+          var open = navLinks.classList.toggle("open");
+          menuBtn.setAttribute("aria-expanded", String(open));
+        });
+
+        document.addEventListener("click", function (event) {
+          if (!event.target.closest(".figma-nav")) {
+            navLinks.classList.remove("open");
+            menuBtn.setAttribute("aria-expanded", "false");
+          }
+        });
+
+        interactiveLinks.forEach(function (link) {
+          link.addEventListener("click", function (event) {
+            var y = link.getAttribute("data-scroll-y");
+            if (y === null || y === "") return;
+            event.preventDefault();
+            scrollToDesignY(y);
+            navLinks.classList.remove("open");
+            menuBtn.setAttribute("aria-expanded", "false");
+          });
+        });
+
+        joinForm.addEventListener("submit", function (event) {
+          event.preventDefault();
+          alert("Thanks! Your details have been submitted.");
+        });
+      })();
+    </script>
+  </body>
+</html>
